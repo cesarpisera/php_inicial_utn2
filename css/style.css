@@ -1,0 +1,293 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #e0e1dd;
+    font-family: "Indie Flower", cursive;
+    padding-bottom: 70px;
+}
+
+.header {
+    background-color: #1b263b;
+    height: 90px;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    max-width: 992px;
+    margin: 0 auto;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+}
+
+.titulo {
+    font-size: 2rem;
+    font-weight: bold;
+    padding-left: 2rem;
+    line-height: 90px;
+    text-shadow:4px 4px 0 #415a77;
+}
+
+.nav-menu {
+    display: flex;
+    margin-right: 2rem;
+    list-style: none;
+}
+
+.nav-menu-item {
+    font-size: 1.5rem;
+    margin: 0 1rem;
+    line-height: 6rem;
+    text-shadow:4px 4px 0 #415a77;
+}
+
+.nav-menu-link{
+    padding: 8px 12px;
+    border-radius: 3px;
+}
+
+.nav-menu-link:hover,
+.nav-menu-link:active {
+    background-color: #778da9;
+    transition: 0.5s;
+}
+
+.nav-toggle {
+    color: white;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    display: none;
+    cursor: pointer; 
+}
+
+main {
+    padding-top: 90px;
+    width: 100%;
+}
+
+.section_bienvenidos {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bienvenidos_container {
+    text-align: center;
+    color: black;
+    width: 50%;
+}
+
+.bienvenidos_container h2 {
+    font-size: 45px;
+}
+
+aside {
+    width: 50%;
+}
+
+aside .imagen_familia {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* BOTONERA INTEGRANTES AQUI */
+
+.integrantes {
+    padding: 2rem;
+    margin: 90px 2rem 2rem 2rem;
+    background-color: aliceblue;
+}
+
+.ul_integrantes {
+    list-style: none;
+    margin: 0;
+    padding: 8px;
+    background-color: #124559;
+    display: inline-block;
+    border-radius: 5px;
+    list-style-type: none;
+}
+
+.ul_integrantes li {
+    float: left;
+    background-color: #aec3b0;
+    width: 100px;
+    height: 30px;
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid #666;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.ul_integrantes li a {
+    color: #01161e;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contenedor_integrantes {
+    padding: 2rem;
+    margin: 2rem;
+    background-color: aliceblue;
+}
+
+.contenedor_integrantes h3 {
+    font-size: 3rem;
+}
+
+.contenedor_integrantes p {
+    font-size: 2rem;
+}
+
+.box_img {
+    width: 30%;
+}
+
+.box_img img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: auto;
+    width: 100vw;
+    padding-top: 40px;
+}
+
+.footer-bottom {
+    background-color: #1b263b;
+    width: 100vw;
+    padding: 20px 0;
+    text-align: center;
+    color: white;
+    text-shadow:4px 4px 0 #415a77;
+}
+
+/* CONTACTO */
+
+
+.contacto {
+    padding: 2rem;
+    margin: 90px 2rem 2rem 2rem;
+    background-color: aliceblue;
+}
+
+.contacto h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;  
+}
+
+.contacto form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contacto label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.contacto input, 
+.contacto textarea {
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.4rem;
+    font-size: 1.4rem;
+    width: 100%; 
+}
+
+.contacto textarea {
+    height: 6rem;
+    resize: vertical;
+}
+
+.contacto .btn_enviar {
+    background-color: #1b263b;
+    color: white;
+    border: none;
+    border-radius: 0.4rem;
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    margin-top: 1rem;
+    width: 25%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contacto .btn_enviar:hover {
+    background-color: #415a77;
+}
+
+
+/* MEDIA QUERY */
+
+@media (max-width: 768px) {
+
+    body {
+    background: white;
+    }
+
+    .header {
+        height: 60px;
+    }
+
+    .titulo {
+        font-size: 25px;
+        padding: 0 20px;
+        line-height: 60px;
+        text-shadow:4px 4px 0 #000;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+        margin-right: 20px;
+        background-color: #4a5759;
+        position: fixed;
+        left: 0;
+        top: 60px;
+        width: 100%;
+        padding: 20px 0;
+        height: calc(100%-60px);
+        overflow-y: auto;
+        left: 100%;
+        transition: left 0.3s;
+    }
+
+    .nav-menu-item {
+        line-height: 70px;
+    }
+
+    .nav-menu-link:hover,
+    .nav-menu-link:active {
+        background: none;
+        color: black;
+    }
+
+    .nav-toggle {
+        display: block;
+        padding-right: 20px;
+    }
+
+    .nav-menu_visible {
+        left: 0;
+    }
+}
